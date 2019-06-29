@@ -1,0 +1,14 @@
+{
+    "manifest_version": 2,
+    "name": "ShareDon",
+    "version": "1.0",
+    "description": "Let's share with Mastodon a website that is open now",
+    "browser_action": {
+        "default_popup": "index.html"
+    },
+    "permissions": [
+        "storage",
+        "tabs"
+    ],
+    "content_security_policy": "script-src 'self' https://code.jquery.com/jquery-2.1.1.min.js https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.0/js/materialize.min.js; object-src 'self'"
+}

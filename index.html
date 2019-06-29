@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en" style="width: 300px">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>ShareDon</title>
+    <!--Import Google Icon Font　これ httpsにすると動く-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!--Import materialize.css-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.0/css/materialize.min.css">
+</head>
+
+<body style="padding: 5%">
+
+    <!--Import jQuery before materialize.js-->
+    <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.0/js/materialize.min.js"></script>
+
+    <!-- HTMLファイル内にJS書くと怒られるので別に書く -->
+    <script type="text/javascript" src="main.js"></script>
+    <h5>ShareDon</h5>
+    <div>
+        <h6>いま開いてるページをMastodonに投稿できます。</h6>
+    </div>
+   
+    <div>
+        <label>投稿内容</label>
+        <input type="text" id="status_input">
+    </div>
+
+    <label>公開範囲</label>
+    <select class="browser-default" id="visibility_select">
+        <option value="public" disabled selected>公開</option>
+        <option value="unlisted">非収載</option>
+        <option value="private">フォロワー限定</option>
+        <option value="direct">ダイレクト</option>
+    </select>
+
+    <div class="row">
+        <a class="waves-effect waves-light btn" id="post_button"><i class="material-icons left">send</i>投稿</a>
+        <br>
+        <br>
+        <a class="waves-effect waves-light btn" id="account_button"><i
+                class="material-icons left">settings</i>アカウント設定</a>
+    </div>
+
+    <div id="account_div"></div>
+
+
+</body>
+
+</html>
